@@ -1,129 +1,336 @@
-.container {
-  padding: 0 2rem;
+.navBar {
+  background: var(--bg-color-white);
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.navBar a {
+  outline: none;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.navLinks {
+  padding: 0 2em;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
+.navLinks a {
   text-decoration: none;
+  font-size: 1em;
+  color: grey;
+  transition: all 0.3s ease-in-out;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.navLinks a:hover {
+  color: var(--primary-color);
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.navLinks.active a {
+  color: var(--primary-color);
 }
 
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
+.button {
+  background-color: var(--primary-color);
+  border: none;
   border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  color: white;
+  padding: 8px 18px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px 0px #16ade94b;
+  outline: none;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+.button:hover {
+  box-shadow: 0 0 10px 0px #16ade9;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.button.featuredButton {
+  padding: 5px 20px;
+  height: 30px;
+  font-size: 0.8em;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.adsImg {
+  width: 15em;
+  height: 15em;
+  object-fit: contain;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.headerText {
+  color: var(--header-text-color) !important;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.featuredImage {
+  width: 100%;
+  height: 30em;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.iconButton {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1em;
+  font-size: 0.3em;
+  border-radius: 5px;
+  margin: 0 0.5em;
+  transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.iconButton:hover {
+  background: rgba(0, 0, 0, 0.7);
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
+.profileContainer {
+  border-radius: 7px;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.profileImage {
+  width: 2.5em;
+  height: 2.5em;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profileDetails p {
+  font-size: 0.8em;
+}
+
+.sectionList {
+  background: whitesmoke;
+  border-radius: 5px;
+}
+
+.sectionList li::marker {
+  color: var(--secondary-color);
+  font-size: 1.5em;
+}
+
+.aboutSection {
+  background: whitesmoke;
+  border-radius: 5px;
+}
+
+.aboutSection .aboutImage {
+  object-fit: contain;
+  width: 100%;
+}
+
+.aboutSection h4 {
+  color: var(--header-text-color) !important;
+}
+
+.aboutTabs {
+  border: 3px solid var(--bg-color-dark);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin: 0 0.5em;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.aboutTabs:hover {
+  background-color: var(--bg-color-dark);
+}
+
+.aboutTabs.active {
+  background-color: var(--bg-color-dark);
+}
+
+.aboutVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.factTabs {
+  border: 2px solid var(--bg-color-dark);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 0.5em;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.factTabs:hover {
+  background-color: var(--bg-color-dark);
+}
+
+.factTabs.active {
+  background-color: var(--bg-color-dark);
+}
+
+.commentsProfileImg {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.commentActionBtn {
+  outline: none;
+}
+
+.reportCard {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+  border: 1px solid black;
+  top: 30px;
+  right: -130px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.reportCard .card-title {
+  background: var(--bg-color-dark);
+  padding: 1em;
+  border-radius: 5px 5px 0 0;
+}
+
+.reportCardTitle {
+  color: var(--secondary-color);
+}
+
+.reportInput {
+  background: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.reportCardBtns {
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 18px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 5px 0px #f36d6a;
+  outline: none;
+}
+
+.commentActionBtn * {
+  transition: 0.3s ease-in-out;
+}
+
+.commentActionBtn:hover span,
+.commentActionBtn:hover i {
+  color: var(--secondary-color);
+}
+
+.commentFormText {
+  color: var(--secondary-color);
+}
+
+.commentFormSignUpLink {
+  color: var(--secondary-color);
+}
+
+.commentFormSignUpLink:hover {
+  color: var(--secondary-color);
+  opacity: 0.8;
+}
+
+.commentFormTextArea {
+  background: whitesmoke;
+}
+
+.commentFormTextArea:focus {
+  background: whitesmoke;
+}
+
+.commentFormBtn {
+  background: var(--secondary-color);
+  width: 10em;
+  height: 2.5em;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  margin: 20px 0px;
+  box-shadow: 0 0 5px 0px #f36d6a;
+}
+
+.commentFormBtn:hover {
+  box-shadow: 0 0 10px 0px #f36d6a;
+}
+
+.newsContainer {
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  overflow: hidden;
+}
+
+.newsContainer > img {
+  width: 100%;
+  height: 13em;
+}
+
+.newsContainer .newsTag {
+  background: var(--secondary-color);
+  color: white;
+  font-size: 0.8em;
+  border-radius: 5px;
+  margin: 1em;
+}
+
+.footerTop {
+  background: var(--bg-color-light-dark);
+  padding: 2em 5em;
+}
+
+.footerLinks {
+  color: whitesmoke;
+  font-size: 0.9em;
+  position: relative;
+}
+
+.footerLinks:hover {
+  color: var(--primary-color);
+}
+
+.footerLinks::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.footerLinks:hover::before {
+  width: 100%;
+}
+
+.socialLinks {
+  padding: 0.3em;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  margin-right: 0.5em;
+}
+
+.socialLinks:hover {
+  background: #fff;
+}
+
+.socialLinks:hover img {
+  filter: invert(51%) sepia(38%) saturate(805%) hue-rotate(314deg)
+    brightness(100%) contrast(91%);
+}
+
+.socialLinks img {
+  filter: invert(1);
+  width: 1.2em;
+  height: 1.2em;
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+}
+
+.footerBottom {
+  background: var(--bg-color-dark);
+  color: white;
+  padding: 1em;
 }
