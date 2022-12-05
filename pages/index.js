@@ -1,8 +1,8 @@
+import Footer from "../src/components/ui/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.css";
 import Head from "next/head";
-import Body from "../components/Body";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Body from "../src/components/ui/Body/Body";
+import Navbar from "../src/components/ui/Navbar/Navbar";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
-import profileImage from "../public/Images/profileImage.jpg";
+import profileImage from "../../../public/Images/profileImage.jpg";
 
 const Comment = ({ styles }) => {
   const comments = [

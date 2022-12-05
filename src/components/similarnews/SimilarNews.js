@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import newsImage from "../public/Images/newsImage.jpg";
-import profileImage from "../public/Images/profileImage.jpg";
-import htmlCss from "../public/Images/htmlCss.png";
-import UXUI from "../public/Images/UXUI.png";
+import htmlCss from "../../../public/Images/htmlCss.png";
+import newsImage from "../../../public/Images/newsImage.jpg";
+import profileImage from "../../../public/Images/profileImage.jpg";
+import UXUI from "../../../public/Images/UXUI.png";
 
 const SimilarNews = ({ styles }) => {
   const news = [

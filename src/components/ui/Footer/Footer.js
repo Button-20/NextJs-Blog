@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import at from "../public/Icons/at.png";
-import facebook from "../public/Icons/facebook.png";
-import instagram from "../public/Icons/instagram.png";
-import linkedin from "../public/Icons/linkedin.png";
-import twitter from "../public/Icons/twitter.png";
-import logoWhite from "../public/Images/logoWhite.png";
+import at from "../../../../public/Icons/at.png";
+import facebook from "../../../../public/Icons/facebook.png";
+import instagram from "../../../../public/Icons/instagram.png";
+import linkedin from "../../../../public/Icons/linkedin.png";
+import twitter from "../../../../public/Icons/twitter.png";
+import logoWhite from "../../../../public/Images/logoWhite.png";
 
 const Footer = ({ styles }) => {
   const homeLinks = [
