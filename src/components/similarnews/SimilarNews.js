@@ -52,14 +52,14 @@ const SimilarNews = () => {
   return (
     <>
       <div
-        className={`${styles.similarNews} d-flex align-items-center w-100 my-5 gap-2`}
+        className={`${styles.similarNews} d-flex justify-content-center align-items-center w-100 my-5 gap-2`}
       >
         {news.map((item) => {
           return (
             <Link
               className={`${
                 styles.newsContainer
-              } col-md-4 position-relative text-decoration-none mx-1 my-3 d-none ${
+              } col-md-4 position-relative text-decoration-none mx-1 my-3 d-none d-sm-none d-md-block ${
                 tabActive === item.id ? styles.active : ""
               }`}
               href={item.link}
@@ -89,7 +89,7 @@ const SimilarNews = () => {
           );
         })}
       </div>
-      <div className="d-flex justify-content-center align-items-center my-2 d-block d-sm-none">
+      <div className={`${styles.factTabsContainer} d-flex justify-content-center align-items-center my-2 d-block d-sm-none d-md-none`}>
         {news.map((item, index) => (
           <span
             key={index}

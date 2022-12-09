@@ -19,10 +19,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .similarNews {
-    overflow-x: hidden;
-    /* width: 73em !important; */
-  }
 
   .factTabs {
     border: 2px solid var(--bg-color-dark);
@@ -45,4 +41,19 @@
   .active {
     display: block !important;
   }
+}
+
+@media screen and (max-width: 769px){
+  .factTabsContainer{
+    display: flex !important;
+  }
+}
+
+/**************************************************** For Tablets *************************************************************/
+@media screen and (max-width: 1024px) {
+  .newsContainer {
+    width: 50%;
+    margin: 0;
+  }
+
 }
