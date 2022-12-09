@@ -78,5 +78,9 @@
     width: 3em;
     height: 3em;
   }
+
+  .reportCard {
+    right: 0px;
+  }
 }
     
