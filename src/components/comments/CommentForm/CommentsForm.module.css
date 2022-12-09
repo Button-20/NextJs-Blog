@@ -1,0 +1,31 @@
+.commentFormTextArea {
+  background: whitesmoke;
+}
+
+.commentFormTextArea:focus {
+  background: whitesmoke;
+}
+
+.commentFormBtn {
+  background: var(--secondary-color);
+  width: 10em;
+  height: 2.5em;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  margin: 20px 0px;
+  box-shadow: 0 0 5px 0px #f36d6a;
+}
+
+.commentFormBtn:hover {
+  box-shadow: 0 0 10px 0px #f36d6a;
+}
+
+@media screen and (max-width: 768px) {
+  .commentForm{
+    padding: 0 10px !important; 
+    margin: 0 10px !important;
+  }
+}

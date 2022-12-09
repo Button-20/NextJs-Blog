@@ -5,13 +5,13 @@ import shareWhite from "../../../../public/Icons/shareWhite.svg";
 import ads from "../../../../public/Images/ads.png";
 import child from "../../../../public/Images/child.jpg";
 import profileImage from "../../../../public/Images/profileImage.jpg";
-import SimilarNews from "../../similarnews/SimilarNews";
-import Comment from "../../Comments/Comment";
-import CommentsForm from "../../Comments/CommentsForm";
 import About from "../../about/About";
+import Comment from "../../Comments/Comment";
+import CommentsForm from "../../comments/CommentForm/CommentsForm";
+import SimilarNews from "../../similarnews/SimilarNews";
+import styles from "./Body.module.css";
 
-const Body = ({ styles }) => {
-
+const Body = () => {
   const aboutTab = [
     {
       id: 1,
@@ -92,7 +92,7 @@ const Body = ({ styles }) => {
           </div>
         </div>
         <section className="py-5">
-          <p className="px-5">
+          <p className={`${styles.article} px-5`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
             pharetra, justo in malesuada tempus, erat mauris molestie lorem, sit
             amet porta odio massa ut magna. Fusce varius sit amet dui eget
@@ -108,7 +108,7 @@ const Body = ({ styles }) => {
             non, blandit tincidunt massa. Nulla vitae euismod leo, in sodales
             neque.
           </p>
-          <p className="px-5">
+          <p className={`${styles.article} px-5`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
             pharetra, justo in malesuada tempus, erat mauris molestie lorem, sit
             amet porta odio massa ut magna. Fusce varius sit amet dui eget
@@ -117,7 +117,9 @@ const Body = ({ styles }) => {
             amet pharetra risus tincidunt nec. Aenean ipsum dui, pretium semper
             lectus at, aliquam gravida tortor.
           </p>
-          <div className="px-5 d-flex align-items-baseline">
+          <div
+            className={`${styles.article} ${styles.flexContainer} px-5 row g-0 align-items-baseline`}
+          >
             <p className="m-0 col pe-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               pharetra, justo in malesuada tempus, erat mauris molestie lorem,
@@ -143,7 +145,7 @@ const Body = ({ styles }) => {
         </section>
 
         {/* About Section */}
-        <About styles={styles} aboutTab={aboutTab} factTab={factTab} />
+        <About aboutTab={aboutTab} factTab={factTab} />
         {/* End of About Section */}
 
         {/* Comments Section */}
@@ -166,7 +168,7 @@ const Body = ({ styles }) => {
             </Link>
             .
           </p>
-          <CommentsForm styles={styles} />
+          <CommentsForm />
         </section>
         {/* End of Comment Form Section */}
 
@@ -177,7 +179,7 @@ const Body = ({ styles }) => {
         </section>
         {/* End of Similar News Section */}
       </div>
-      <div className="col-md-2">
+      <div className="col-md-2 d-none d-sm-none d-md-none">
         <Image src={ads} alt="ads" className={styles.adsImg} />
       </div>
     </div>

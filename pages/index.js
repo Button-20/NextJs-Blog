@@ -1,7 +1,6 @@
-import Footer from "../src/components/ui/Footer/Footer";
-import "bootstrap/dist/css/bootstrap.css";
 import Head from "next/head";
 import Body from "../src/components/ui/Body/Body";
+import Footer from "../src/components/ui/Footer/Footer";
 import Navbar from "../src/components/ui/Navbar/Navbar";
 import styles from "../styles/Home.module.css";
 
@@ -16,15 +15,21 @@ export default function Home() {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
         ></link>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossOrigin="anonymous"
+        ></link>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="container">
-        <Navbar styles={styles} />
-        <Body styles={styles} />
+        <Navbar />
+        <Body />
       </main>
 
-      <Footer styles={styles} />
+      <Footer />
     </div>
   );
 }

@@ -1,18 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
 import logo from "../../../../public/Images/logo.png";
+import styles from "./Navbar.module.css";
 
-const Navbar = ({ styles }) => {
+const Navbar = () => {
+  const router = useRouter();
+
   const links = [
     { href: "/", label: "Home" },
     { href: "/search", label: "Search Page" },
     { href: "/about", label: "About Us" },
     { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Contact Us" },
-    ];
-    
-    const router = useRouter();
+  ];
+
+  const [active, setActive] = useState(false);
 
   return (
     <div
@@ -22,7 +26,11 @@ const Navbar = ({ styles }) => {
         <Image src={logo} alt="logo" width={150} />
       </Link>
       <div className="mx-auto">
-        <ul className="nav">
+        <ul
+          className={`${
+            active ? styles.mobileNavActive : styles.mobileNav
+          } nav`}
+        >
           {links.map(({ href, label }) => (
             <li
               key={`${href}${label}`}
@@ -33,9 +41,25 @@ const Navbar = ({ styles }) => {
               <Link href={href}>{label}</Link>
             </li>
           ))}
+          <button
+            className={`${styles.closeBtn} d-block d-sm-block d-md-none`}
+            onClick={() => setActive(!active)}
+          >
+            <i className="bi bi-x"></i>
+          </button>
         </ul>
       </div>
-      <button className={styles.button}>Sign In/Up</button>
+      <>
+        <button className={`${styles.button} d-none d-sm-none d-md-block`}>
+          Sign In/Up
+        </button>
+        <button
+          onClick={() => setActive(!active)}
+          className={`${styles.menuButton} d-block d-sm-block d-md-none text-dark`}
+        >
+          <i className="bi bi-list"></i>
+        </button>
+      </>
     </div>
   );
 };

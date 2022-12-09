@@ -6,8 +6,9 @@ import instagram from "../../../../public/Icons/instagram.png";
 import linkedin from "../../../../public/Icons/linkedin.png";
 import twitter from "../../../../public/Icons/twitter.png";
 import logoWhite from "../../../../public/Images/logoWhite.png";
+import styles from "./Footer.module.css";
 
-const Footer = ({ styles }) => {
+const Footer = () => {
   const homeLinks = [
     {
       id: 1,
@@ -92,11 +93,11 @@ const Footer = ({ styles }) => {
 
   return (
     <footer className="d-flex flex-column justify-content-center">
-      <div className={`${styles.footerTop} d-flex col py-5`}>
-        <Link href="#" className="col-12 col-md-3">
+      <div className={`${styles.footerTop} row g-0 col py-5`}>
+        <Link href="#" className="col-12 col-md-3 d-none d-sm-none d-md-block">
           <Image src={logoWhite} alt="logo" width={200} />
         </Link>
-        <div className="col-12 col-md-2">
+        <div className="col-sm-6 col-md-2">
           <h5 className="fw-bold text-white">Home</h5>
           <ul className="list-unstyled">
             {homeLinks.map((link) => (
@@ -111,7 +112,7 @@ const Footer = ({ styles }) => {
             ))}
           </ul>
         </div>
-        <div className="col-12 col-md-2">
+        <div className="col-sm-6 col-md-2">
           <h5 className="fw-bold text-white">Explore</h5>
           <ul className="list-unstyled">
             {exploreLinks.map((link) => (

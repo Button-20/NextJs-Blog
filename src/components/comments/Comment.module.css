@@ -1,0 +1,82 @@
+.commentsProfileImg {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.commentActionBtn {
+  outline: none;
+}
+
+.reportCard {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+  border: 1px solid black;
+  top: 30px;
+  right: -130px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.reportCard .card-title {
+  background: var(--bg-color-dark);
+  padding: 1em;
+  border-radius: 5px 5px 0 0;
+}
+
+.reportCardTitle {
+  color: var(--secondary-color);
+}
+
+.reportInput {
+  background: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.reportCardBtns {
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 18px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 5px 0px #f36d6a;
+  outline: none;
+}
+
+.commentActionBtn * {
+  transition: 0.3s ease-in-out;
+}
+
+.commentActionBtn:hover span,
+.commentActionBtn:hover i {
+  color: var(--secondary-color);
+}
+
+.commentFormText {
+  color: var(--secondary-color);
+}
+
+.commentFormSignUpLink {
+  color: var(--secondary-color);
+}
+
+.commentFormSignUpLink:hover {
+  color: var(--secondary-color);
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .commentsContainer {
+    padding: 0 10px !important;
+    /* margin: 20px 10px !important; */
+  }
+
+  .commentsProfileImg{
+    width: 3em;
+    height: 3em;
+  }
+}
+    

@@ -3,17 +3,18 @@ import { useState } from "react";
 import fact from "../../../public/Icons/fact.svg";
 import about from "../../../public/Images/about.png";
 import blog_s_video from "../../../public/Images/blog_s_video.png";
+import styles from "./About.module.css";
 
-const About = ({ styles, aboutTab, factTab }) => {
+const About = ({ aboutTab, factTab }) => {
   const [tabActive, setTabActive] = useState("aboutTab1");
   const [tabActive2, setTabActive2] = useState("factTab1");
-  
 
   return (
     <>
-      {" "}
-      <div className={`${styles.aboutSection} d-flex align-items-center`}>
-        <Image src={about} alt="about" className={styles.aboutImage} />
+      <div
+        className={`${styles.aboutSection} d-flex g-0 align-items-center py-5`}
+      >
+        <Image src={about} alt="about" className={`${styles.aboutImage}`} />
         <div className="p-4">
           <h4 className="fw-bold">About Platute</h4>
           <p className="m-0">
@@ -49,7 +50,7 @@ const About = ({ styles, aboutTab, factTab }) => {
         />
       </div>
       <section className="pb-5">
-        <p className="px-5">
+        <p className={`${styles.article} px-5`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra,
           justo in malesuada tempus, erat mauris molestie lorem, sit amet porta
           odio massa ut magna. Fusce varius sit amet dui eget euismod. Aenean ac
@@ -64,7 +65,7 @@ const About = ({ styles, aboutTab, factTab }) => {
           ipsum, fringilla at eros non, blandit tincidunt massa. Nulla vitae
           euismod leo, in sodales neque.
         </p>
-        <p className="px-5">
+        <p className={`${styles.article} px-5`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra,
           justo in malesuada tempus, erat mauris molestie lorem, sit amet porta
           odio massa ut magna. Fusce varius sit amet dui eget euismod. Aenean ac
@@ -74,7 +75,7 @@ const About = ({ styles, aboutTab, factTab }) => {
           gravida tortor.
         </p>
         <div
-          className={`${styles.aboutSection} d-flex align-items-center mx-5 px-5`}
+          className={`${styles.aboutSection} row g-0 align-items-center mx-5 px-5`}
         >
           <Image src={fact} alt="about" width={80} />
           <div className="p-4">

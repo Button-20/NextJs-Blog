@@ -1,16 +1,19 @@
 import { useState } from "react";
-
-const CommentsForm = ({ styles }) => {
+import styles from "./CommentsForm.module.css";
+const CommentsForm = () => {
   const [comment, setComment] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-      console.log(comment);
-      comment && setComment("");
+    console.log(comment);
+    comment && setComment("");
   };
 
   return (
-    <form className="row px-5 mx-5" onSubmit={handleSubmit}>
+    <form
+      className={`${styles.commentForm} row px-5 mx-5 px-sm-0`}
+      onSubmit={handleSubmit}
+    >
       <textarea
         className={`${styles.commentFormTextArea} form-control`}
         placeholder="Write a comment..."

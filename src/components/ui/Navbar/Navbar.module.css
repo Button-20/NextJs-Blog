@@ -1,0 +1,41 @@
+.navBar {
+  background: var(--bg-color-white);
+}
+
+.navBar a {
+  outline: none;
+}
+
+.navLinks {
+  padding: 0 2em;
+}
+
+.navLinks a {
+  text-decoration: none;
+  font-size: 1em;
+  color: grey;
+  transition: all 0.3s ease-in-out;
+}
+
+.navLinks a:hover {
+  color: var(--primary-color);
+}
+
+.navLinks.active a {
+  color: var(--primary-color);
+}
+
+.button {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 18px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px 0px #16ade94b;
+  outline: none;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px 0px #16ade9;
+}

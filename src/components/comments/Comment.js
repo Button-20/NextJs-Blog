@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import profileImage from "../../../public/Images/profileImage.jpg";
+import styles from "./Comment.module.css";
 
-const Comment = ({ styles }) => {
+const Comment = () => {
   const comments = [
     {
       id: 1,
@@ -40,7 +41,7 @@ const Comment = ({ styles }) => {
   return (
     <Fragment>
       {comments.map((item) => (
-        <div className="row px-5 my-5" key={item.id}>
+        <div className={`${styles.commentsContainer} row px-5 my-5`} key={item.id}>
           <div className="col-2">
             <Image
               src={item.image}
