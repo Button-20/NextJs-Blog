@@ -6,7 +6,7 @@ import ads from "../../../../public/Images/ads.png";
 import child from "../../../../public/Images/child.jpg";
 import profileImage from "../../../../public/Images/profileImage.jpg";
 import About from "../../about/About";
-import Comment from "../../Comments/Comment";
+import Comment from "../../comments/Comment";
 import CommentsForm from "../../comments/CommentForm/CommentsForm";
 import SimilarNews from "../../similarnews/SimilarNews";
 import styles from "./Body.module.css";
