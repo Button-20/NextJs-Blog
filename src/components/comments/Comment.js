@@ -41,7 +41,10 @@ const Comment = () => {
   return (
     <Fragment>
       {comments.map((item) => (
-        <div className={`${styles.commentsContainer} row px-5 my-5`} key={item.id}>
+        <div
+          className={`${styles.commentsContainer} row px-5 my-5`}
+          key={item.id}
+        >
           <div className="col-2">
             <Image
               src={item.image}

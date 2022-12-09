@@ -151,7 +151,7 @@ const Body = () => {
         {/* Comments Section */}
         <section className="py-5">
           <h3 className="text-center fw-bolder">Comments</h3>
-          <Comment styles={styles} />
+          <Comment/>
         </section>
         {/* End of Comments Section */}
 
